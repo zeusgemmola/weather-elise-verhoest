@@ -1,0 +1,42 @@
+# Application météo
+
+1 - Ajouter la structure HTML permettant de construire le moteur de recherche (cf commentaire HTML)
+
+2 - Utiliser le fichier JSON pour obtenir le résultat
+Le fichier country-capitals.json vous permettra de vérifier l'existance d'une ville
+
+3 - en cas d'erreur de soummission de nom (non trouvé dans la liste) 
+    - afficher en rouge en dessous du champ "Erreur : résultat introuvable" 
+    - mettre une bordure rouge sur le champ 
+    - vider le champ 
+    - désactiver le bouton
+    - remettre le focus sur le champ
+
+4 - en cas d'erreur de soummission à vide 
+    - afficher en rouge en dessous du champ "Erreur : le champ est obligatoire" 
+    - mettre une bordure rouge sur le champ 
+    - vider le champ 
+    - désactiver le bouton
+    - remettre le focus sur le champ
+
+5 - en cas succès de soummission (ville trouvée dans le fichier)
+    - appeler l'API pour récupérer les informations météo 
+    // webservice météo : http://api.openweathermap.org/data/2.5/weather?lat=xxxxxx&lon=xxx&appid=${apikey}`
+    // api key : 82005d27a116c2880c8f0fcb866998a0
+    - afficher un loader à gauche du champ pendant l'appel 
+    - mettre à jour les informations suivantes dans l'encart météo : 
+        - afficher par défaut, la température en Celcius sans décimale (il aut convertir car l'api renvoie du KEVIN)
+        - Afficher le nom de la ville
+        - Afficher la description
+        - affiche le bon icone (le nom est fourni par l'API) et les icones se trouvent dans le dossier /icons
+    - vider le champ
+    - désactiver le bouton
+
+6 - dès que l'utilisateur saisie à nouveau dans le champ 
+    - le bouton se réactive 
+    - si il y a des erreurs tout est réinitialisé
+
+7 - proposer à l'utilisateur de pouvoir switcher de Celcius en Fahrenheit et inversement
+    - sur le clic de l'unité de température
+    - Ex : 14°C <-> 57° F
+

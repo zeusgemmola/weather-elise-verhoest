@@ -1,0 +1,55 @@
+<!-- HTML CODE --><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App - JavaScript</title>
+    <link rel="stylesheet" href="font/Rimouski.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-title">
+        <p>Weather</p>
+      </div>
+      <div class="notification"></div>
+      <div class="weather-container">
+        <div class="weather-icon">
+          <img src="icons/unknown.png" alt="" />
+        </div>
+        <div class="temperature-value">
+          <p><span id="temp">- </span>°<span id="unity">C</span></p>
+        </div>
+        <div class="temperature-description">
+          <p>-</p>
+        </div>
+        <div class="location">
+          <p>-</p>
+        </div>
+      </div>
+      <div class="info">
+        <h3>Veuillez entrer une capitale</h3>
+      </div>
+      <div class="search">
+        <div class="gif">
+          <img id="gif" src="loader.gif" alt="" />
+        </div>
+        <!-- Ajouter le formulaire de recherche ici -->
+        <input
+          type="capital"
+          name="capital"
+          id="capital"
+          placeholder="Capitale"
+        />
+        <input
+          type="button"
+          name="soumission"
+          id="soumission"
+          value="Envoyer"
+        />
+      </div>
+      <div class="message"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
